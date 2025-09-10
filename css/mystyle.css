@@ -1,0 +1,105 @@
+/* 
+CSS Selectors:
+1. Tag/Element Selector
+2. ID Selector
+3. Class Selector
+*/
+
+/* * {
+    margin:0;
+} */
+
+header {
+    width:100%;
+    height: 160px;
+    background-color:black;
+}
+
+.logo-div {
+    width:25%;
+    height: 100%;
+    background-color:aliceblue;
+    /* border:2px solid black; */
+    float:left;
+
+}
+
+.title {
+    width:35%;
+    height: 100%;
+    background-color:aqua;
+    float:left;
+}
+
+.navDiv {
+    width:40%;
+    height: 100%;
+    background-color:aquamarine;
+    float:left;
+}
+
+header div nav ul {
+    list-style-type:none ;
+}
+
+#headerNavigation {
+float:right;
+margin-right:12px;
+}
+
+#headerNavigation li {
+    display: inline;
+    margin-left:12px;
+    background-color: black;
+    padding: 8px 12px;
+}
+
+#headerNavigation li a {
+    text-decoration: none;
+    color: white;
+}
+
+#headerNavigation li:hover {
+    background-color: white;
+    color:black;
+}
+
+#headerNavigation li a:hover {
+    color:black;
+}
+
+section {
+    height: 600px;
+    border-top-width: 12px;
+    border-top-color:black;
+    border-top-style: solid;
+    /* outline-style: dashed;
+    outline-width: 1px;
+    outline-color: red; */
+    outline: 2px dotted red;;
+}
+
+aside {
+    width: 29%;
+    height: 600px;
+    background-color: purple;
+    opacity:1;
+    float: left;
+
+}
+
+main {
+    width: 70%;
+    height: 600px;
+    background-color: chocolate;
+    float: left;
+    background-image: url('../images/playstore_screenshot.png');
+    background-position: center center;
+}
+
+footer {
+    width: 100%;
+    height: 200px;
+    background-color: burlywood;
+    clear: both;
+}

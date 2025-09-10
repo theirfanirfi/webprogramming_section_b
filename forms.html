@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML - Forms</title>
+</head>
+<body>
+
+	<center>
+
+	<h1>NU Student Registration</h1>
+	<form>
+
+		<div>
+			<label for="fullname">Full Name: </label>
+			<input type="text" placeholder="Enter your full name" id="fullname" 
+			required
+			/>
+		</div>
+
+		<div>
+			<label>Gender:</label>
+			<input type="radio" name="gender" value="male" required /> Male 
+			<input type="radio" name="gender"
+			value="female" required /> Female 
+		</div>
+
+		<div>
+			<label for="age">Age:</label>
+			<input type="date" id="age" required
+			min="08-23-2024" max="23/09/2025"
+			 />
+		</div>
+
+		<div>
+			<label>Select Your Region</label>
+		<select id="region" name="region">
+			<option value="ict">ICT</option>
+			<option value="ajk">AJK</option>
+			<option value="kp">KP</option>
+			<option value="punjab">Punjab</option>
+			<option value="sindh" selected>Sindh</option>
+			<option value="balochistan">Balochistan</option>
+			<option value="gilgit">Gilgit Baltistan</option>
+		</select>
+
+		</div>
+
+		<div>
+		<lable for="picture">Image</lable>
+		<input type="file" id="picture" />
+		</div>
+
+		<div>
+			<label for="email">Email:</label>
+			<input type="email" id="email" placeholder="Enter your email" />
+		</div>
+
+		<div>
+			<label for="password">Password</label>
+			<input type="password" id="password" placeholder="Enter your password" 
+			minlength="6" maxlength="12" 
+			pattern="" 
+			/>
+		</div>
+
+		<div>
+			<h3>Select courses</h3>
+
+			<input type="checkbox" name="courses[]" value="html" checked disabled /> HTML 
+			<input type="checkbox" name="courses[]" value="css" /> CSS 
+			<input type="checkbox" name="courses[]" value="javascript" /> JAVASCRIPT 
+			<input type="checkbox" name="courses[]" value="jquery" /> JQuery 
+			<input type="checkbox" name="courses[]" value="react" /> React 
+
+		</div>
+
+		<div>
+
+			<button id="btn">Register</button>
+		</div>
+
+
+	</form>
+
+</center>
+</body>
+</html>
