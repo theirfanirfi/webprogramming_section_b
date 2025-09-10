@@ -1,5 +1,5 @@
 * {
-    font-family: serif,Times, Courier;
+    font-family: "Story Script", sans-serif;
 }
 
 header {
@@ -36,4 +36,7 @@ section p {
     text-align: left;
     text-align-last: right;
     text-transform: capitalize;
+    font-size: 28px;
+    font-style: italic;
+    /* font-weight: 900; */
 }
