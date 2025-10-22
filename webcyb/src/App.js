@@ -1,31 +1,37 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react'
+import MobileComponent from './components/MobileComponent'
+import LargeScreenComponent from './components/LargeScreenComponent'
 
 function App(){
   const [counter, setCounter] = useState(10)
+  const [control, setControl] = useState(false)
+  const [mobile, setMobile] = useState(false)
 
-  const clickHandler = () => {
-    setCounter(counter+20)
-    // alert('the button is clicked '+counter)
-
+  const incrementCounterHandler = () => {
+    setCounter(counter+10)
+    setMobile(!mobile);
   }
+
+  useEffect(()=>{
+  },[])
+
+  const getView = () => {
+    if(mobile){
+      return <MobileComponent/>
+    }
+    return <LargeScreenComponent counterValue={counter} 
+    name="Faizan"
+    />
+  }
+  
 
   return (
     <>
-    <h1>This is my first component {counter}</h1>
-    <h2>this is h2</h2>
-    <button onClick={clickHandler}>Click me</button>
-    </>
+  <h2>This is h2</h2>
+  {getView()}
+  <button onClick={incrementCounterHandler}>Increment</button>
+  </>
   )
 }
 
 export default App;
-
-
-
-
-
-
-
-
-
-
