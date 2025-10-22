@@ -1,0 +1,82 @@
+header {
+    width:100%;
+    height:20%;
+    background-color: pink;
+}
+
+section {
+    width: 100%;
+    height: 80%;
+    border:1px solid black;
+}
+
+aside {
+    width:20%;
+    height: 100%;
+    background-color: gray;
+    float:left;
+}
+
+main {
+    width:80%;
+    height: 100%;
+    background-color: lightblue;
+    float:left;
+    overflow-y: scroll;
+    overflow-x: scroll;
+}
+
+main table {
+    width: 100%;
+    height: 100%;
+}
+
+main table,td, th {
+    border:1px solid black;
+    border-collapse: collapse;
+}
+main table th {
+    text-align: center;
+    padding: 12px;
+    background-color: black;
+    color: white;
+    width: 20%;
+}
+
+main table tbody {
+    background-color: aqua;
+}
+
+main table tbody tr:hover {
+    background-color: black;
+    color: white;
+}
+
+main table tbody tr {
+    height: 100px;
+
+}
+
+main table tbody td {
+    text-align: center;
+    vertical-align: center;
+}
+
+main table td:nth-child(even){
+    background-color: red;
+}
+
+table {
+    caption-side: top;
+}
+table caption {
+    text-align: right;
+}
+
+
+
+footer {
+    width: 100%;
+    height: 30%;
+    background-color: black;
+}
