@@ -1,12 +1,16 @@
 import {useEffect, useState} from 'react'
+import AddStudentFormComponent from '../components/AddStudentFormComponent'
 function StudentsPage(){
     const [students, setStudents] = useState([])
 
+    const addStudentToState = (student_obj) => {
+        setStudents([...students, student_obj])
+    }
     useEffect(()=>{
         setTimeout(()=>{
             let student = {
-                roll_number: 2341,
-                student_name: "Subhan"
+                rollnumber: 2341,
+                studentname: "Subhan"
             }
             setStudents([...students,student])
         },5000)
@@ -14,6 +18,8 @@ function StudentsPage(){
 
     return (
         <center>
+
+            <AddStudentFormComponent addStudentToState={addStudentToState} />
         <table>
             <thead>
                 <th>Roll Number</th>
@@ -25,8 +31,8 @@ function StudentsPage(){
                 {students.map((std, index)=>{
                     return (
                 <tr>
-                    <td>{std.roll_number}</td>
-                    <td>{std.student_name}</td>
+                    <td>{std.rollnumber}</td>
+                    <td>{std.studentname}</td>
                     <td>
                         <button>Delete</button>
                     </td>
