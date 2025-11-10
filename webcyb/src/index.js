@@ -4,11 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import StudentsPage from './pages/StudentsPage';
+import TodosPage from './pages/TodosPage';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <StudentsPage />
+    <TodosPage />
   </React.StrictMode>
 );
 
