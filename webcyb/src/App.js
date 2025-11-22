@@ -1,36 +1,27 @@
-import {useState, useEffect} from 'react'
-import MobileComponent from './components/MobileComponent'
-import LargeScreenComponent from './components/LargeScreenComponent'
-
-function App(){
-  const [counter, setCounter] = useState(10)
-  const [control, setControl] = useState(false)
-  const [mobile, setMobile] = useState(false)
-
-  const incrementCounterHandler = () => {
-    setCounter(counter+10)
-    setMobile(!mobile);
-  }
-
-  useEffect(()=>{
-  },[])
-
-  const getView = () => {
-    if(mobile){
-      return <MobileComponent/>
-    }
-    return <LargeScreenComponent counterValue={counter} 
-    name="Faizan"
-    />
-  }
-  
-
+import { BrowserRouter, Switch, Route } from "react-router-dom"
+import StudentsPage from "./pages/StudentsPage"
+import TodosPage from "./pages/TodosPage"
+import NavigationComponent from "./components/NavigationComponent"
+import SingleTodoPage from "./pages/SingleTodoPage"
+const App = () => {
   return (
-    <>
-  <h2>This is h2</h2>
-  {getView()}
-  <button onClick={incrementCounterHandler}>Increment</button>
-  </>
+    <BrowserRouter>
+    <NavigationComponent />
+    <Switch>
+      <Route path="/students">
+      <StudentsPage />
+      </Route>
+
+      <Route path="/todos">
+      <TodosPage />
+      </Route>
+
+      <Route path="/todo/:id/">
+      <SingleTodoPage />
+      </Route>
+    </Switch>
+    
+    </BrowserRouter>
   )
 }
 
