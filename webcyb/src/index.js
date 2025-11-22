@@ -6,11 +6,10 @@ import reportWebVitals from './reportWebVitals';
 import StudentsPage from './pages/StudentsPage';
 import TodosPage from './pages/TodosPage';
 
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <TodosPage />
+    <App />
   </React.StrictMode>
 );
 
